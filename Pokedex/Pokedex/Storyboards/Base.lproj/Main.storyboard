@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fIs-Jr-bHi">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PokemonCell" id="fIs-Jr-bHi">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fIs-Jr-bHi" id="Btr-XU-Eui">
@@ -36,7 +36,7 @@
                     <navigationItem key="navigationItem" id="Xzl-to-wLT">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="ul9-wk-Qyg">
                             <connections>
-                                <segue destination="IRs-zb-EXg" kind="show" id="8jT-C0-nrQ"/>
+                                <segue destination="IRs-zb-EXg" kind="show" identifier="SearchPokemon" id="8jT-C0-nrQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
