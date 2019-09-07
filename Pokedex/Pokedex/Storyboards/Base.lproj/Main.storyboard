@@ -48,7 +48,7 @@
         <!--Search for a Pokemon-->
         <scene sceneID="WtH-ot-Jtq">
             <objects>
-                <viewController id="IRs-zb-EXg" sceneMemberID="viewController">
+                <viewController id="IRs-zb-EXg" customClass="PokemonSearchViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PzK-dK-qQQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,6 +63,9 @@
                         <viewLayoutGuide key="safeArea" id="cFU-oh-KFL"/>
                     </view>
                     <navigationItem key="navigationItem" title="Search for a Pokemon" id="E2r-7T-P6O"/>
+                    <connections>
+                        <outlet property="searchBar" destination="7KL-NO-Oby" id="6hw-rO-aME"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0E0-hI-KAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
