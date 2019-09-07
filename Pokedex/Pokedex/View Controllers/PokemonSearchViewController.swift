@@ -16,23 +16,22 @@ class PokemonSearchViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        pokemonController.searchForPokemon(with: searchBar.text!) { (error) in
-            if let error = error {
-                NSLog("Error fetching Pokemon information: \(error)")
-                return
-            }
+        guard let searchTerm = searchBar.text else { return }
+        pokemonController.searchForPokemon(with: searchTerm) { (_) in
             DispatchQueue.main.async {
                 self.updateViews()
             }
         }
     }
     
+    
     func updateViews() {
         guard let pokemon = pokemonController.pokemon else { return }
-        title = pokemon.name
+        title = pokemon.name.capitalized
     }
 
 }

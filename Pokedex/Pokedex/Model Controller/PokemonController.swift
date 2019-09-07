@@ -11,6 +11,7 @@ import Foundation
 class PokemonController {
     
     var pokemon: Pokemon?
+    var pokemonTeam: [Pokemon] = []
     
     let baseURL = URL(string: "https://pokeapi.co/api/v2/pokemon/")!
     typealias CompletionHandler = (Error?) -> Void
@@ -39,5 +40,9 @@ class PokemonController {
             }
             completion(nil)
             }.resume()
+    }
+    
+    func savePokemon(pokemon: Pokemon) {
+        pokemonTeam.append(pokemon)
     }
 }
